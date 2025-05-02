@@ -2,6 +2,7 @@
 import { useInView } from "react-intersection-observer"
 import { useEffect, useState } from "react"
 import Header from "./components/Header"
+import Hero from "./components/Hero"
 
 export default function Home() {
   const [orangeSectionRef, inView] = useInView({
@@ -24,81 +25,7 @@ export default function Home() {
   return (
     <main className={`min-h-screen text-white transition-colors duration-700 ease-in-out ${inView ? 'bg-[#ff6633]' : 'bg-[#1e2321]'}`}>
       <Header />
-
-      {/* Hero Section - Full viewport height */}
-      <section className="container mx-auto px-6 my-32" >
-        <div className="flex flex-col justify-center h-full">
-          <div className="max-w-3xl">
-            <h1 className="font-playfair text-5xl md:text-8xl leading-tight tracking-tight">
-              Where Vision
-              <br />
-              Meets<span className="italic"> Experience</span>
-            </h1>
-            <div className="mt-8">
-              <span className="inline-block bg-green-400 text-green-900 px-4 py-2 rounded-full text-sm font-medium">
-                Saudi Arabia&apos;s leading event innovation house
-              </span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Gallery Grid - Masonry style matching the reference */}
-      <section className="w-full py-12" style={{ minHeight: `${windowHeight}px` }}>
-        {/* Top row - 5 images of varying widths, scrolling right to left */}
-        <div className="overflow-hidden relative mb-1">
-          <div className="flex animate-marquee whitespace-nowrap">
-            {/* Original row */}
-            <div className="bg-gray-200 h-[400px] flex-shrink-0 mr-1" style={{flexBasis: '25%'}}></div>
-            <div className="bg-gray-200 h-[400px] flex-shrink-0 mr-1" style={{flexBasis: '16.6667%'}}></div>
-            <div className="bg-gray-200 h-[400px] flex-shrink-0 mr-1" style={{flexBasis: '25%'}}></div>
-            <div className="bg-gray-200 h-[400px] flex-shrink-0 mr-1" style={{flexBasis: '16.6667%'}}></div>
-            <div className="bg-gray-200 h-[400px] flex-shrink-0 mr-1" style={{flexBasis: '16.6667%'}}></div>
-            {/* Duplicate for seamless loop */}
-            <div className="bg-gray-200 h-[400px] flex-shrink-0 mr-1" style={{flexBasis: '25%'}}></div>
-            <div className="bg-gray-200 h-[400px] flex-shrink-0 mr-1" style={{flexBasis: '16.6667%'}}></div>
-            <div className="bg-gray-200 h-[400px] flex-shrink-0 mr-1" style={{flexBasis: '25%'}}></div>
-            <div className="bg-gray-200 h-[400px] flex-shrink-0 mr-1" style={{flexBasis: '16.6667%'}}></div>
-            <div className="bg-gray-200 h-[400px] flex-shrink-0 mr-1" style={{flexBasis: '16.6667%'}}></div>
-          </div>
-        </div>
-
-        {/* Bottom row - 6 images of varying widths, scrolling left to right */}
-        <div className="overflow-hidden relative">
-          <div className="flex animate-marquee-reverse whitespace-nowrap">
-            {/* Original row */}
-            <div className="bg-gray-200 h-[400px] flex-shrink-0 mr-1" style={{flexBasis: '16.6667%'}}></div>
-            <div className="bg-gray-200 h-[400px] flex-shrink-0 mr-1" style={{flexBasis: '16.6667%'}}></div>
-            <div className="bg-gray-200 h-[400px] flex-shrink-0 mr-1" style={{flexBasis: '25%'}}></div>
-            <div className="bg-gray-200 h-[400px] flex-shrink-0 mr-1" style={{flexBasis: '16.6667%'}}></div>
-            <div className="bg-gray-200 h-[400px] flex-shrink-0 mr-1" style={{flexBasis: '16.6667%'}}></div>
-            <div className="bg-gray-200 h-[400px] flex-shrink-0 mr-1" style={{flexBasis: '8.3333%'}}></div>
-            {/* Duplicate for seamless loop */}
-            <div className="bg-gray-200 h-[400px] flex-shrink-0 mr-1" style={{flexBasis: '16.6667%'}}></div>
-            <div className="bg-gray-200 h-[400px] flex-shrink-0 mr-1" style={{flexBasis: '16.6667%'}}></div>
-            <div className="bg-gray-200 h-[400px] flex-shrink-0 mr-1" style={{flexBasis: '25%'}}></div>
-            <div className="bg-gray-200 h-[400px] flex-shrink-0 mr-1" style={{flexBasis: '16.6667%'}}></div>
-            <div className="bg-gray-200 h-[400px] flex-shrink-0 mr-1" style={{flexBasis: '16.6667%'}}></div>
-            <div className="bg-gray-200 h-[400px] flex-shrink-0 mr-1" style={{flexBasis: '8.3333%'}}></div>
-          </div>
-        </div>
-      </section>
-      <style jsx global>{`
-        @keyframes marquee {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(-50%); }
-        }
-        @keyframes marquee-reverse {
-          0% { transform: translateX(-50%); }
-          100% { transform: translateX(0); }
-        }
-        .animate-marquee {
-          animation: marquee 30s linear infinite;
-        }
-        .animate-marquee-reverse {
-          animation: marquee-reverse 30s linear infinite;
-        }
-      `}</style>
+      <Hero />
 
       {/* Orange Section - Changes color when scrolled into view - Full viewport height */}
       <section
