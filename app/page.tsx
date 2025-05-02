@@ -53,10 +53,30 @@ export default function Home() {
           <div className="max-w-3xl mx-auto">
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div className="relative h-64 md:h-80">
-                {/* Three placeholder images positioned as in the design */}
-                <div className="bg-gray-200 w-3/5 h-3/5 rounded absolute top-0 left-0"></div>
-                <div className="bg-gray-200 w-2/5 h-2/5 rounded absolute bottom-0 left-1/4"></div>
-                <div className="bg-gray-200 w-1/3 h-1/3 rounded absolute top-1/4 right-0"></div>
+                {/* Main large image */}
+                <div className="absolute inset-0 w-full h-full">
+                  <img 
+                    src="/placeholder2.jpg" 
+                    alt="Main event image"
+                    className="w-full h-full object-cover rounded-lg"
+                  />
+                </div>
+                {/* Overlapping top-right image */}
+                <div className="absolute -top-4 -right-4 w-1/3 h-1/3 z-10">
+                  <img 
+                    src="/placeholder2.jpg" 
+                    alt="Event detail"
+                    className="w-full h-full object-cover rounded-lg shadow-lg"
+                  />
+                </div>
+                {/* Overlapping bottom-left image */}
+                <div className="absolute -bottom-4 -left-4 w-1/3 h-1/3 z-10">
+                  <img 
+                    src="/placeholder2.jpg" 
+                    alt="Event detail"
+                    className="w-full h-full object-cover rounded-lg shadow-lg"
+                  />
+                </div>
               </div>
               <div>
                 <p className="text-lg md:text-xl leading-relaxed">
