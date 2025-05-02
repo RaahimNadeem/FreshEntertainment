@@ -34,8 +34,8 @@ export default function Home() {
         style={{ minHeight: `${windowHeight}px` }}
       >
         <div className="container py-16 h-full flex flex-col justify-center">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-2xl md:text-3xl mb-6 px-6 leading-tight font-bold">
+          <div className="max-w-5xl pl-4 md:pl-12">
+            <h2 className="text-3xl md:text-4xl mb-6 leading-tight font-bold">
               Fresh Entertainment is Saudi Arabia&apos;s premier event innovation house, specializing in creating
               immersive, multi-sensory experiences that transcend traditional event boundaries.
             </h2>
@@ -43,16 +43,13 @@ export default function Home() {
         </div>
 
         <div className="relative my-12">
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="w-4 h-4 bg-white rotate-45 z-10"></div>
-          </div>
           <div className="w-full h-0.5 bg-white"></div>
         </div>
 
-        <div className="container py-16 h-full flex flex-col justify-center">
-          <div className="max-w-3xl mx-auto">
-            <div className="grid md:grid-cols-2 gap-8 items-center">
-              <div className="relative h-64 md:h-80">
+        <div className=" bg-red-500 w-full py-8 md:py-16 h-full flex flex-col justify-center">
+          <div className="w-full px-4 md:px-12 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+              <div className="relative h-60 sm:h-72 md:h-80 w-full">
                 {/* Main large image */}
                 <div className="absolute inset-0 w-full h-full">
                   <img 
@@ -62,7 +59,7 @@ export default function Home() {
                   />
                 </div>
                 {/* Overlapping top-right image */}
-                <div className="absolute -top-4 -right-4 w-1/3 h-1/3 z-10">
+                <div className="absolute -top-4 -right-4 w-1/4 h-1/4 z-10 hidden sm:block">
                   <img 
                     src="/placeholder2.jpg" 
                     alt="Event detail"
@@ -70,7 +67,7 @@ export default function Home() {
                   />
                 </div>
                 {/* Overlapping bottom-left image */}
-                <div className="absolute -bottom-4 -left-4 w-1/3 h-1/3 z-10">
+                <div className="absolute -bottom-4 -left-4 w-1/4 h-1/4 z-10 hidden sm:block">
                   <img 
                     src="/placeholder2.jpg" 
                     alt="Event detail"
@@ -79,7 +76,7 @@ export default function Home() {
                 </div>
               </div>
               <div>
-                <p className="text-lg md:text-xl leading-relaxed">
+                <p className="text-base sm:text-lg md:text-xl leading-relaxed">
                   We blend cultural authenticity with cutting-edge technology to deliver experiences that resonate
                   deeply with audiences and create lasting impressions.
                 </p>
