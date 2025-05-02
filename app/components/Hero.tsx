@@ -1,9 +1,17 @@
 "use client"
 import { useEffect, useState } from "react"
 import Image from "next/image"
+import { useTypewriter, Cursor } from 'react-simple-typewriter'
 
 export default function Hero() {
   const [windowHeight, setWindowHeight] = useState(0)
+  const [text] = useTypewriter({
+    words: ['Experience', 'Wonder', 'Innovation', 'Spectacle', 'Magic'],
+    loop: 0,
+    typeSpeed: 100,
+    deleteSpeed: 90,
+    delaySpeed: 1200,
+  })
 
   useEffect(() => {
     const handleResize = () => {
@@ -23,7 +31,11 @@ export default function Hero() {
             <h1 className="font-playfair text-5xl md:text-8xl leading-tight tracking-tight">
               Where Vision
               <br />
-              Meets<span className="italic"> Experience</span>
+              Meets  
+              <span className="pl-4 italic text-[#ff6633]">
+                {text}
+                <span className="animate-pulse">|</span>
+              </span>
             </h1>
             <div className="mt-14">
               <span className="inline-block bg-green-400 text-green-900 px-4 py-2 rounded-full text-sm font-medium">
