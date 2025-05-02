@@ -1,23 +1,21 @@
 "use client"
 import Link from "next/link"
+import Image from "next/image"
 
 export default function Header() {
   return (
     <header className="container mx-auto px-6 py-6 flex justify-between items-center">
       <div className="flex items-center">
         <div className="mr-2">
-          <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="40" height="40" fill="white" />
-            <path d="M10 10H30V15H10V10Z" fill="#1e2321" />
-            <path d="M10 17H20V30H10V17Z" fill="#1e2321" />
-            <path d="M22 17H30V22H22V17Z" fill="#1e2321" />
-            <path d="M22 24H30V30H22V24Z" fill="#1e2321" />
-          </svg>
+          <Image
+            src="/logo.png"
+            alt="Fresh Entertainment Logo"
+            width={120}
+            height={120}
+            priority
+          />
         </div>
-        <div>
-          <h2 className="font-playfair font-bold text-white text-lg tracking-wide">FRESH</h2>
-          <p className="text-xs text-gray-300 tracking-wider">ENTERTAINMENT</p>
-        </div>
+        
       </div>
 
       <div className="flex items-center justify-between w-full ml-10">
