@@ -33,17 +33,24 @@ export default function Home() {
         className="w-full"
         style={{ minHeight: `${windowHeight}px` }}
       >
-        <div className="container mx-auto px-6 py-16 h-full flex flex-col justify-center">
+        <div className="container py-16 h-full flex flex-col justify-center">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-2xl md:text-3xl mb-6 leading-tight">
+            <h2 className="text-2xl md:text-3xl mb-6 px-6 leading-tight font-bold">
               Fresh Entertainment is Saudi Arabia&apos;s premier event innovation house, specializing in creating
               immersive, multi-sensory experiences that transcend traditional event boundaries.
             </h2>
+          </div>
+        </div>
 
-            <div className="flex justify-center my-12">
-              <div className="w-4 h-4 bg-white rotate-45"></div>
-            </div>
+        <div className="relative my-12">
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="w-4 h-4 bg-white rotate-45 z-10"></div>
+          </div>
+          <div className="w-full h-0.5 bg-white"></div>
+        </div>
 
+        <div className="container py-16 h-full flex flex-col justify-center">
+          <div className="max-w-3xl mx-auto">
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div className="relative h-64 md:h-80">
                 {/* Three placeholder images positioned as in the design */}
