@@ -5,6 +5,12 @@ import Header from "./components/Header"
 import Hero from "./components/Hero"
 import About from "./components/About"
 import Tagline from "./components/Tagline"
+import AlternateHero from "./components/AlternateHero"
+import AlternateHeader from "./components/AlternateHeader"
+import AlternateTagline from "./components/AlternateTagline"
+import OurMission from "./components/OurMission"
+import Services from "./components/Services"
+
 
 export default function Home() {
   const [taglineRef, taglineInView] = useInView({
@@ -37,10 +43,16 @@ export default function Home() {
 
   return (
     <main className={`min-h-screen text-white transition-colors duration-700 ease-in-out ${bgColor}`}>
-      <Header />
-      <Hero />
+      {/* <FilmGrain /> */}
+      {/* <Header /> */}
+      <AlternateHeader />
+      <AlternateHero />
+      <AlternateTagline />
+      {/* <Hero /> */}
       <About ref={orangeSectionRef} />
-      <Tagline ref={taglineRef} />
+      <OurMission />
+      <Services />
+      {/* <Tagline ref={taglineRef} /> */}
     </main>
   )
 }
