@@ -32,19 +32,19 @@ const About = React.forwardRef<HTMLDivElement>((props, ref) => {
             {/* Left: Main image with two overlapping images */}
             <div className="relative flex justify-center items-center w-full">
               <img
-                src="/placeholder2.jpg"
+                src="/img1.webp"
                 alt="Event visual"
                 className="w-full max-w-3xl rounded-xl shadow-lg object-cover"
               />
               {/* Top-right small image */}
               <img
-                src="/placeholder2.jpg"
+                src="/img2.webp"
                 alt="Avatar detail"
                 className="absolute -top-4 -right-4 sm:-top-8 sm:-right-8 w-12 h-12 sm:w-16 sm:h-16 md:w-28 md:h-28 rounded-full border-2 border-white shadow-lg object-cover"
               />
               {/* Bottom-left small image */}
               <img
-                src="/placeholder2.jpg"
+                src="/img3.webp"
                 alt="Avatar detail"
                 className="absolute -bottom-4 -left-4 sm:-bottom-8 sm:-left-8 w-12 h-12 sm:w-16 sm:h-16 md:w-28 md:h-28 rounded-full border-2 border-white shadow-lg object-cover"
               />
@@ -52,15 +52,15 @@ const About = React.forwardRef<HTMLDivElement>((props, ref) => {
             {/* Right: Mission and Vision */}
             <div className="flex flex-col gap-10 justify-center items-center w-full h-full">
               {/* Mission */}
-              <div>
-                <div className="inline-block px-6 py-2 rounded-full bg-blue-300 text-[#23272e] font-semibold text-lg mb-2">Our Mission</div>
+              <div className="group">
+                <div className="inline-block px-6 py-2 rounded-full bg-blue-300/80 backdrop-blur-sm border border-white/20 text-[#23272e] font-semibold text-lg mb-2 transition-all duration-300 group-hover:bg-blue-300 group-hover:border-white/40 group-hover:shadow-lg group-hover:shadow-blue-300/20">Our Mission</div>
                 <div className="text-base sm:text-lg md:text-xl leading-relaxed text-white max-w-md">
                   To transform spaces into immersive journeys that engage all five senses
                 </div>
               </div>
               {/* Vision */}
-              <div>
-                <div className="inline-block px-6 py-2 rounded-full bg-green-300 text-[#23272e] font-semibold text-lg mb-2">Our Vision</div>
+              <div className="group">
+                <div className="inline-block px-6 py-2 rounded-full bg-green-300/80 backdrop-blur-sm border border-white/20 text-[#23272e] font-semibold text-lg mb-2 transition-all duration-300 group-hover:bg-green-300 group-hover:border-white/40 group-hover:shadow-lg group-hover:shadow-green-300/20">Our Vision</div>
                 <div className="text-base sm:text-lg md:text-xl leading-relaxed text-white max-w-md">
                   To pioneer the future of experiential entertainment in the Middle East
                 </div>

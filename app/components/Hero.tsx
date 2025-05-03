@@ -53,36 +53,36 @@ export default function Hero() {
           <div className="flex animate-marquee whitespace-nowrap">
             {/* Original row */}
             <div className="h-[400px] flex-shrink-0 mr-1 relative" style={{flexBasis: '25%'}}>
-              <Image src="/placeholder2.jpg" alt="Gallery image" fill className="object-cover" />
+              <Image src="/img1.webp" alt="Gallery image" fill className="object-cover" />
             </div>
             <div className="h-[400px] flex-shrink-0 mr-1 relative" style={{flexBasis: '16.6667%'}}>
-              <Image src="/placeholder2.jpg" alt="Gallery image" fill className="object-cover" />
+              <Image src="/img2.webp" alt="Gallery image" fill className="object-cover" />
             </div>
             <div className="h-[400px] flex-shrink-0 mr-1 relative" style={{flexBasis: '25%'}}>
-              <Image src="/placeholder2.jpg" alt="Gallery image" fill className="object-cover" />
+              <Image src="/img3.webp" alt="Gallery image" fill className="object-cover" />
             </div>
             <div className="h-[400px] flex-shrink-0 mr-1 relative" style={{flexBasis: '16.6667%'}}>
-              <Image src="/placeholder2.jpg" alt="Gallery image" fill className="object-cover" />
+              <Image src="/img4.webp" alt="Gallery image" fill className="object-cover" />
             </div>
             <div className="h-[400px] flex-shrink-0 mr-1 relative" style={{flexBasis: '16.6667%'}}>
-              <Image src="/placeholder2.jpg" alt="Gallery image" fill className="object-cover" />
+              <Image src="/img5.webp" alt="Gallery image" fill className="object-cover" />
             </div>
             {/* Duplicate for seamless loop */}
             <div className="h-[400px] flex-shrink-0 mr-1 relative" style={{flexBasis: '25%'}}>
+              <Image src="/img6.jpg" alt="Gallery image" fill className="object-cover" />
+            </div>
+            <div className="h-[400px] flex-shrink-0 mr-1 relative" style={{flexBasis: '16.6667%'}}>
+              <Image src="/img7.webp" alt="Gallery image" fill className="object-cover" />
+            </div>
+            {/* <div className="h-[400px] flex-shrink-0 mr-1 relative" style={{flexBasis: '25%'}}>
               <Image src="/placeholder2.jpg" alt="Gallery image" fill className="object-cover" />
             </div>
             <div className="h-[400px] flex-shrink-0 mr-1 relative" style={{flexBasis: '16.6667%'}}>
               <Image src="/placeholder2.jpg" alt="Gallery image" fill className="object-cover" />
             </div>
-            <div className="h-[400px] flex-shrink-0 mr-1 relative" style={{flexBasis: '25%'}}>
-              <Image src="/placeholder2.jpg" alt="Gallery image" fill className="object-cover" />
-            </div>
             <div className="h-[400px] flex-shrink-0 mr-1 relative" style={{flexBasis: '16.6667%'}}>
               <Image src="/placeholder2.jpg" alt="Gallery image" fill className="object-cover" />
-            </div>
-            <div className="h-[400px] flex-shrink-0 mr-1 relative" style={{flexBasis: '16.6667%'}}>
-              <Image src="/placeholder2.jpg" alt="Gallery image" fill className="object-cover" />
-            </div>
+            </div> */}
           </div>
         </div>
 
@@ -91,42 +91,42 @@ export default function Hero() {
           <div className="flex animate-marquee-reverse whitespace-nowrap">
             {/* Original row */}
             <div className="h-[400px] flex-shrink-0 mr-1 relative" style={{flexBasis: '16.6667%'}}>
-              <Image src="/placeholder2.jpg" alt="Gallery image" fill className="object-cover" />
+              <Image src="/img8.jpg" alt="Gallery image" fill className="object-cover" />
             </div>
             <div className="h-[400px] flex-shrink-0 mr-1 relative" style={{flexBasis: '16.6667%'}}>
-              <Image src="/placeholder2.jpg" alt="Gallery image" fill className="object-cover" />
+              <Image src="/img8.jpg" alt="Gallery image" fill className="object-cover" />
             </div>
             <div className="h-[400px] flex-shrink-0 mr-1 relative" style={{flexBasis: '25%'}}>
-              <Image src="/placeholder2.jpg" alt="Gallery image" fill className="object-cover" />
+              <Image src="/img10.jpg" alt="Gallery image" fill className="object-cover" />
             </div>
             <div className="h-[400px] flex-shrink-0 mr-1 relative" style={{flexBasis: '16.6667%'}}>
-              <Image src="/placeholder2.jpg" alt="Gallery image" fill className="object-cover" />
+              <Image src="/img11.jpg" alt="Gallery image" fill className="object-cover" />
             </div>
-            <div className="h-[400px] flex-shrink-0 mr-1 relative" style={{flexBasis: '16.6667%'}}>
+            {/* <div className="h-[400px] flex-shrink-0 mr-1 relative" style={{flexBasis: '16.6667%'}}>
               <Image src="/placeholder2.jpg" alt="Gallery image" fill className="object-cover" />
             </div>
             <div className="h-[400px] flex-shrink-0 mr-1 relative" style={{flexBasis: '8.3333%'}}>
               <Image src="/placeholder2.jpg" alt="Gallery image" fill className="object-cover" />
-            </div>
+            </div> */}
             {/* Duplicate for seamless loop */}
             <div className="h-[400px] flex-shrink-0 mr-1 relative" style={{flexBasis: '16.6667%'}}>
-              <Image src="/placeholder2.jpg" alt="Gallery image" fill className="object-cover" />
+              <Image src="/img12.jpg" alt="Gallery image" fill className="object-cover" />
             </div>
             <div className="h-[400px] flex-shrink-0 mr-1 relative" style={{flexBasis: '16.6667%'}}>
-              <Image src="/placeholder2.jpg" alt="Gallery image" fill className="object-cover" />
+              <Image src="/img14.webp" alt="Gallery image" fill className="object-cover" />
             </div>
             <div className="h-[400px] flex-shrink-0 mr-1 relative" style={{flexBasis: '25%'}}>
-              <Image src="/placeholder2.jpg" alt="Gallery image" fill className="object-cover" />
+              <Image src="/img13.jpg" alt="Gallery image" fill className="object-cover" />
             </div>
             <div className="h-[400px] flex-shrink-0 mr-1 relative" style={{flexBasis: '16.6667%'}}>
-              <Image src="/placeholder2.jpg" alt="Gallery image" fill className="object-cover" />
+              <Image src="/img115.jpg" alt="Gallery image" fill className="object-cover" />
             </div>
-            <div className="h-[400px] flex-shrink-0 mr-1 relative" style={{flexBasis: '16.6667%'}}>
+            {/* <div className="h-[400px] flex-shrink-0 mr-1 relative" style={{flexBasis: '16.6667%'}}>
               <Image src="/placeholder2.jpg" alt="Gallery image" fill className="object-cover" />
             </div>
             <div className="h-[400px] flex-shrink-0 mr-1 relative" style={{flexBasis: '8.3333%'}}>
               <Image src="/placeholder2.jpg" alt="Gallery image" fill className="object-cover" />
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
