@@ -25,20 +25,20 @@ export default function Hero() {
 
   return (
     <>
-      <section className="container mx-auto px-6 my-32">
+      <section className="container mx-auto px-4 sm:px-6 md:px-8 my-16 sm:my-24 md:my-32">
         <div className="flex flex-col justify-center h-full">
           <div className="max-w-3xl">
-            <h1 className="font-playfair text-5xl md:text-8xl leading-tight tracking-tight">
+            <h1 className="font-playfair text-4xl sm:text-5xl md:text-6xl lg:text-8xl leading-tight tracking-tight">
               Where Vision
               <br />
               Meets  
-              <span className="pl-4 italic text-[#ff6633]">
+              <span className="pl-2 sm:pl-4 italic text-[#ff6633]">
                 {text}
                 <span className="animate-pulse">|</span>
               </span>
             </h1>
-            <div className="mt-14">
-              <span className="inline-block bg-green-400 text-green-900 px-4 py-2 rounded-full text-sm font-medium">
+            <div className="mt-8 sm:mt-14">
+              <span className="inline-block bg-green-400 text-green-900 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium">
                 Saudi Arabia&apos;s leading event innovation house
               </span>
             </div>
@@ -52,37 +52,28 @@ export default function Hero() {
         <div className="overflow-hidden relative mb-1">
           <div className="flex animate-marquee whitespace-nowrap">
             {/* Original row */}
-            <div className="h-[400px] flex-shrink-0 mr-1 relative" style={{flexBasis: '25%'}}>
+            <div className="h-[300px] sm:h-[350px] md:h-[400px] flex-shrink-0 mr-1 relative" style={{flexBasis: '25%'}}>
               <Image src="/img1.webp" alt="Gallery image" fill className="object-cover" />
             </div>
-            <div className="h-[400px] flex-shrink-0 mr-1 relative" style={{flexBasis: '16.6667%'}}>
+            <div className="h-[300px] sm:h-[350px] md:h-[400px] flex-shrink-0 mr-1 relative" style={{flexBasis: '16.6667%'}}>
               <Image src="/img2.webp" alt="Gallery image" fill className="object-cover" />
             </div>
-            <div className="h-[400px] flex-shrink-0 mr-1 relative" style={{flexBasis: '25%'}}>
+            <div className="h-[300px] sm:h-[350px] md:h-[400px] flex-shrink-0 mr-1 relative" style={{flexBasis: '25%'}}>
               <Image src="/img3.webp" alt="Gallery image" fill className="object-cover" />
             </div>
-            <div className="h-[400px] flex-shrink-0 mr-1 relative" style={{flexBasis: '16.6667%'}}>
+            <div className="h-[300px] sm:h-[350px] md:h-[400px] flex-shrink-0 mr-1 relative" style={{flexBasis: '16.6667%'}}>
               <Image src="/img4.webp" alt="Gallery image" fill className="object-cover" />
             </div>
-            <div className="h-[400px] flex-shrink-0 mr-1 relative" style={{flexBasis: '16.6667%'}}>
+            <div className="h-[300px] sm:h-[350px] md:h-[400px] flex-shrink-0 mr-1 relative" style={{flexBasis: '16.6667%'}}>
               <Image src="/img5.webp" alt="Gallery image" fill className="object-cover" />
             </div>
             {/* Duplicate for seamless loop */}
-            <div className="h-[400px] flex-shrink-0 mr-1 relative" style={{flexBasis: '25%'}}>
+            <div className="h-[300px] sm:h-[350px] md:h-[400px] flex-shrink-0 mr-1 relative" style={{flexBasis: '25%'}}>
               <Image src="/img6.jpg" alt="Gallery image" fill className="object-cover" />
             </div>
-            <div className="h-[400px] flex-shrink-0 mr-1 relative" style={{flexBasis: '16.6667%'}}>
+            <div className="h-[300px] sm:h-[350px] md:h-[400px] flex-shrink-0 mr-1 relative" style={{flexBasis: '16.6667%'}}>
               <Image src="/img7.webp" alt="Gallery image" fill className="object-cover" />
             </div>
-            {/* <div className="h-[400px] flex-shrink-0 mr-1 relative" style={{flexBasis: '25%'}}>
-              <Image src="/placeholder2.jpg" alt="Gallery image" fill className="object-cover" />
-            </div>
-            <div className="h-[400px] flex-shrink-0 mr-1 relative" style={{flexBasis: '16.6667%'}}>
-              <Image src="/placeholder2.jpg" alt="Gallery image" fill className="object-cover" />
-            </div>
-            <div className="h-[400px] flex-shrink-0 mr-1 relative" style={{flexBasis: '16.6667%'}}>
-              <Image src="/placeholder2.jpg" alt="Gallery image" fill className="object-cover" />
-            </div> */}
           </div>
         </div>
 

@@ -10,6 +10,8 @@ import AlternateHeader from "./components/AlternateHeader"
 import AlternateTagline from "./components/AlternateTagline"
 import OurMission from "./components/OurMission"
 import Services from "./components/Services"
+import Contact from "./components/Contact"
+import Milestones from "./components/Milestones"
 
 
 export default function Home() {
@@ -52,7 +54,9 @@ export default function Home() {
       <About ref={orangeSectionRef} />
       <OurMission />
       <Services />
-      {/* <Tagline ref={taglineRef} /> */}
+      <Tagline ref={taglineRef} />
+      <Milestones />
+      <Contact />
     </main>
   )
 }
