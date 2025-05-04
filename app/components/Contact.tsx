@@ -1,57 +1,190 @@
 "use client"
-import React from 'react'
+import React, { useState } from 'react'
 import { FaInstagram, FaTwitter, FaLinkedin } from 'react-icons/fa'
+import { motion } from 'framer-motion'
 
-const InstagramIcon = () => <FaInstagram className="inline-block text-xl" />;
-const TwitterIcon = () => <FaTwitter className="inline-block text-xl" />;
-const LinkedinIcon = () => <FaLinkedin className="inline-block text-xl" />;
+const InstagramIcon = () => <FaInstagram size={20} />;
+const TwitterIcon = () => <FaTwitter size={20} />;
+const LinkedinIcon = () => <FaLinkedin size={20} />;
 
 const Contact = () => {
+  const [formState, setFormState] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormState({
+      ...formState,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Add your form submission logic here
+    console.log(formState);
+  };
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5
+      }
+    }
+  };
+
   return (
-    <div className="min-h-screen mt-8 justify-center flex flex-col md:flex-row text-[#f6f5ef]">
+    <motion.div 
+      className="min-h-screen mt-8 justify-center flex flex-col md:flex-row text-[#f6f5ef]"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      variants={containerVariants}
+    >
       {/* Left Column */}
-      <div className="w-full md:w-1/2 flex flex-col items-center px-4 sm:px-6 md:px-8 py-8 sm:py-12 md:py-16 space-y-8 sm:space-y-12 md:space-y-16 max-w-2xl mx-auto md:mx-0">
+      <motion.div 
+        className="w-full md:w-1/2 flex flex-col items-center px-4 sm:px-6 md:px-8 py-8 sm:py-12 md:py-16 space-y-8 sm:space-y-12 md:space-y-16 max-w-2xl mx-auto md:mx-0"
+        variants={containerVariants}
+      >
         {/* Quirky Message */}
-        <div className="w-full">
+        <motion.div className="w-full" variants={itemVariants}>
           <p className="text-lg sm:text-xl md:text-2xl mb-4">We genuinely care about you and your events. Let us know how we can serve you better.</p>
-        </div>
+        </motion.div>
         {/* Socials */}
-        <div className="w-full">
+        <motion.div className="w-full" variants={itemVariants}>
           <h3 className="font-bold uppercase text-xs mb-2 tracking-widest">Social Links</h3>
           <ul className="space-y-2 text-base sm:text-lg">
-            <li className="flex items-center space-x-2">
+            <motion.li 
+              className="flex items-center space-x-2"
+              whileHover={{ x: 10, color: "#E1306C" }}
+              transition={{ type: "spring", stiffness: 400 }}
+            >
               <InstagramIcon />
               <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:underline">Instagram</a>
-            </li>
-            <li className="flex items-center space-x-2">
+            </motion.li>
+            <motion.li 
+              className="flex items-center space-x-2"
+              whileHover={{ x: 10, color: "#1DA1F2" }}
+              transition={{ type: "spring", stiffness: 400 }}
+            >
               <TwitterIcon />
               <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:underline">Twitter</a>
-            </li>
-            <li className="flex items-center space-x-2">
+            </motion.li>
+            <motion.li 
+              className="flex items-center space-x-2"
+              whileHover={{ x: 10, color: "#0A66C2" }}
+              transition={{ type: "spring", stiffness: 400 }}
+            >
               <LinkedinIcon />
               <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:underline">LinkedIn</a>
-            </li>
+            </motion.li>
           </ul>
-        </div>
-        {/* Dummy Form */}
-        <div className="w-full">
+        </motion.div>
+        {/* Form */}
+        <motion.div className="w-full" variants={itemVariants}>
           <h3 className="font-bold uppercase text-xs mb-2 tracking-widest">Contact Form</h3>
-          <form className="space-y-4">
-            <input type="text" placeholder="Your Name" className="w-full border-b border-[#f6f5ef] bg-transparent py-2 px-1 focus:outline-none placeholder:text-[#f6f5ef]/70" />
-            <input type="email" placeholder="Your Email" className="w-full border-b border-[#f6f5ef] bg-transparent py-2 px-1 focus:outline-none placeholder:text-[#f6f5ef]/70" />
-            <textarea placeholder="Your Message" className="w-full border-b border-[#f6f5ef] bg-transparent py-2 px-1 focus:outline-none placeholder:text-[#f6f5ef]/70" rows={3}></textarea>
-            <button type="submit" className="mt-2 px-6 py-2 border border-[#f6f5ef] rounded-full hover:bg-[#f6f5ef] hover:text-[#1e2321] transition">Send</button>
+          <form onSubmit={handleSubmit} className="space-y-4">
+            <motion.div
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              <input 
+                type="text"
+                name="name"
+                value={formState.name}
+                onChange={handleInputChange}
+                placeholder="Your Name" 
+                className="w-full border-b border-[#f6f5ef] bg-transparent py-2 px-1 focus:outline-none placeholder:text-[#f6f5ef]/70 focus:border-[#73e0a8] transition-colors duration-300" 
+              />
+            </motion.div>
+            <motion.div
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              <input 
+                type="email"
+                name="email"
+                value={formState.email}
+                onChange={handleInputChange}
+                placeholder="Your Email" 
+                className="w-full border-b border-[#f6f5ef] bg-transparent py-2 px-1 focus:outline-none placeholder:text-[#f6f5ef]/70 focus:border-[#73e0a8] transition-colors duration-300" 
+              />
+            </motion.div>
+            <motion.div
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              <textarea 
+                name="message"
+                value={formState.message}
+                onChange={handleInputChange}
+                placeholder="Your Message" 
+                className="w-full border-b border-[#f6f5ef] bg-transparent py-2 px-1 focus:outline-none placeholder:text-[#f6f5ef]/70 focus:border-[#73e0a8] transition-colors duration-300" 
+                rows={3}
+              ></textarea>
+            </motion.div>
+            <motion.button 
+              type="submit" 
+              className="mt-2 px-6 py-2 border border-[#f6f5ef] rounded-full hover:bg-[#f6f5ef] hover:text-[#1e2321] transition relative overflow-hidden group"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <span className="relative z-10">Send</span>
+              <motion.div 
+                className="absolute inset-0 bg-[#f6f5ef] -z-10"
+                initial={{ x: "-100%" }}
+                whileHover={{ x: 0 }}
+                transition={{ type: "tween", duration: 0.3 }}
+              />
+            </motion.button>
           </form>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
       {/* Right Column */}
-      <div className="w-full md:w-1/2 flex flex-col items-center px-4 sm:px-6 md:px-8 py-8 sm:py-12 md:py-16 border-t md:border-t-0 relative">
-        <div className="w-full max-w-2xl mx-auto">
+      <motion.div 
+        className="w-full md:w-1/2 flex flex-col items-center px-4 sm:px-6 md:px-8 py-8 sm:py-12 md:py-16 border-t md:border-t-0 relative"
+        variants={containerVariants}
+      >
+        <motion.div 
+          className="w-full max-w-2xl mx-auto"
+          variants={itemVariants}
+        >
           <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-9xl font-bold leading-none tracking-tight mb-4 group">
-            <span className="inline-block group-hover:rotate-[-2deg] transition-transform duration-500">DROP</span>{" "}
-            <span className="inline-block group-hover:rotate-[2deg] transition-transform duration-500">US</span>
+            <motion.span 
+              className="inline-block"
+              whileHover={{ rotate: -2, scale: 1.05 }}
+              transition={{ type: "spring", stiffness: 400 }}
+            >
+              DROP
+            </motion.span>{" "}
+            <motion.span 
+              className="inline-block"
+              whileHover={{ rotate: 2, scale: 1.05 }}
+              transition={{ type: "spring", stiffness: 400 }}
+            >
+              US
+            </motion.span>
             <div className="flex items-center">
-              <div className="relative group-hover:scale-110 transition-transform duration-500">
+              <motion.div 
+                className="relative"
+                whileHover={{ scale: 1.1, rotate: 12 }}
+                transition={{ type: "spring", stiffness: 400 }}
+              >
                 <svg 
                   className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 mr-4 md:mr-6 transform group-hover:rotate-12 transition-all duration-500" 
                   viewBox="0 0 24 24" 
@@ -92,33 +225,48 @@ const Contact = () => {
                   />
                 </svg>
                 <div className="absolute inset-0 bg-[#73e0a8]/10 rounded-full blur-xl group-hover:opacity-100 opacity-0 transition-opacity duration-500"></div>
-              </div>
+              </motion.div>
               <div className="relative">
-                <span className='ml-4 md:ml-6 text-4xl sm:text-5xl md:text-7xl lg:text-9xl group-hover:text-[#73e0a8] transition-colors duration-500 inline-block group-hover:rotate-[-2deg]'>
+                <motion.span 
+                  className='ml-4 md:ml-6 text-4xl sm:text-5xl md:text-7xl lg:text-9xl transition-colors duration-500 inline-block'
+                  whileHover={{ rotate: -2, scale: 1.05, color: "#73e0a8" }}
+                  transition={{ type: "spring", stiffness: 400 }}
+                >
                   A
-                </span>
+                </motion.span>
                 {" "}
-                <span className='text-4xl sm:text-5xl md:text-7xl lg:text-9xl group-hover:text-[#73e0a8] transition-colors duration-500 inline-block group-hover:rotate-[2deg]'>
+                <motion.span 
+                  className='text-4xl sm:text-5xl md:text-7xl lg:text-9xl transition-colors duration-500 inline-block'
+                  whileHover={{ rotate: 2, scale: 1.05, color: "#73e0a8" }}
+                  transition={{ type: "spring", stiffness: 400 }}
+                >
                   LINE
-                </span>
+                </motion.span>
               </div>
             </div>
           </h1>
-          <a 
+          <motion.a 
             href="mailto:hello@freshentertainment.com" 
             className="block mt-6 sm:mt-8 text-xl sm:text-2xl underline decoration-[#f6f5ef] underline-offset-4 hover:text-[#ff6633] transition-all duration-500 relative group"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
           >
             <span className="relative z-10 inline-block group-hover:scale-105 transition-transform duration-500">
               hello@freshentertainment.com
             </span>
             <div className="absolute inset-0 bg-[#ff6633]/10 rounded-full blur-xl group-hover:opacity-100 opacity-0 transition-opacity duration-500"></div>
-            <span className="absolute -bottom-6 left-0 text-xs sm:text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-300">
+            <motion.span 
+              className="absolute -bottom-6 left-0 text-xs sm:text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+              initial={{ y: 10, opacity: 0 }}
+              whileHover={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.2 }}
+            >
               (We promise to reply quick!)
-            </span>
-          </a>
-        </div>
-      </div>
-    </div>
+            </motion.span>
+          </motion.a>
+        </motion.div>
+      </motion.div>
+    </motion.div>
   )
 }
 
