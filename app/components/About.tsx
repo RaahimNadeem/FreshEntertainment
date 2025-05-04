@@ -8,7 +8,7 @@ const About = React.forwardRef<HTMLDivElement>((props, ref) => {
       {/* Orange section with heading and right-aligned paragraph */}
       <div
         ref={ref}
-        className="min-h-screen py-4 gap-12 h-full px-8 md:px-24 flex flex-col justify-center"
+        className="min-h-screen py-4 gap-8 h-full px-8 md:px-24 flex flex-col justify-center"
       >
         <div className="max-w-5xl mb-4 md:mb-8">
           <h2 className="text-3xl md:text-6xl leading-tight font-bold">
