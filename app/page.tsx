@@ -12,7 +12,7 @@ import OurMission from "./components/OurMission"
 import Services from "./components/Services"
 import Contact from "./components/Contact"
 import Milestones from "./components/Milestones"
-
+import Preloader from "./components/Preloader"
 
 export default function Home() {
   const [taglineRef, taglineInView] = useInView({
@@ -44,19 +44,22 @@ export default function Home() {
   }
 
   return (
-    <main className={`min-h-screen text-white transition-colors duration-700 ease-in-out ${bgColor}`}>
-      {/* <FilmGrain /> */}
-      {/* <Header /> */}
-      <AlternateHeader />
-      <AlternateHero />
-      <AlternateTagline />
-      {/* <Hero /> */}
-      <About ref={orangeSectionRef} />
-      <OurMission />
-      <Services />
-      <Tagline ref={taglineRef} />
-      <Milestones />
-      <Contact />
-    </main>
+    <>
+      <Preloader />
+      <main className={`min-h-screen text-white transition-colors duration-700 ease-in-out ${bgColor}`}>
+        {/* <FilmGrain /> */}
+        {/* <Header /> */}
+        <AlternateHeader />
+        <AlternateHero />
+        <AlternateTagline />
+        {/* <Hero /> */}
+        <About ref={orangeSectionRef} />
+        <OurMission />
+        <Services />
+        <Tagline ref={taglineRef} />
+        <Milestones />
+        <Contact />
+      </main>
+    </>
   )
 }

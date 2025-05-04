@@ -1,11 +1,6 @@
 "use client"
 import React, { useState } from 'react'
-import { FaInstagram, FaTwitter, FaLinkedin } from 'react-icons/fa'
 import { motion } from 'framer-motion'
-
-const InstagramIcon = () => <FaInstagram size={20} />;
-const TwitterIcon = () => <FaTwitter size={20} />;
-const LinkedinIcon = () => <FaLinkedin size={20} />;
 
 const Contact = () => {
   const [formState, setFormState] = useState({
@@ -66,7 +61,7 @@ const Contact = () => {
           <p className="text-lg sm:text-xl md:text-2xl mb-4">We genuinely care about you and your events. Let us know how we can serve you better.</p>
         </motion.div>
         {/* Socials */}
-        <motion.div className="w-full" variants={itemVariants}>
+        {/* <motion.div className="w-full" variants={itemVariants}>
           <h3 className="font-bold uppercase text-xs mb-2 tracking-widest">Social Links</h3>
           <ul className="space-y-2 text-base sm:text-lg">
             <motion.li 
@@ -94,7 +89,7 @@ const Contact = () => {
               <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:underline">LinkedIn</a>
             </motion.li>
           </ul>
-        </motion.div>
+        </motion.div> */}
         {/* Form */}
         <motion.div className="w-full" variants={itemVariants}>
           <h3 className="font-bold uppercase text-xs mb-2 tracking-widest">Contact Form</h3>
