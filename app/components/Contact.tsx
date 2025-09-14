@@ -18,8 +18,43 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Add your form submission logic here
-    console.log(formState);
+    
+    // Basic validation
+    if (!formState.name.trim() || !formState.email.trim() || !formState.message.trim()) {
+      alert('Please fill in all fields before submitting.');
+      return;
+    }
+    
+    // Basic email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formState.email)) {
+      alert('Please enter a valid email address.');
+      return;
+    }
+    
+    // Create mailto link with form data
+    const subject = encodeURIComponent(`Contact Form Submission from ${formState.name}`);
+    const body = encodeURIComponent(
+      `Name: ${formState.name}\n` +
+      `Email: ${formState.email}\n\n` +
+      `Message:\n${formState.message}\n\n` +
+      `---\n` +
+      `This message was sent from the Fresh Entertainment contact form.`
+    );
+    
+    const mailtoLink = `mailto:Info@adba-sa.com?subject=${subject}&body=${body}`;
+    
+    // Open user's email client
+    window.location.href = mailtoLink;
+    
+    // Optional: Reset form after opening email client
+    setTimeout(() => {
+      setFormState({
+        name: '',
+        email: '',
+        message: ''
+      });
+    }, 1000);
   };
 
   const containerVariants = {
