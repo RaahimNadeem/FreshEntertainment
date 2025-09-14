@@ -9,7 +9,7 @@ const Tagline = React.forwardRef<HTMLDivElement>((props, ref) => (
   >
     <div className="w-full flex flex-col items-center justify-center px-4">
       <h1
-        className="text-6xl sm:text-6xl md:text-8xl font-extrabold uppercase text-center leading-none tracking-tight"
+        className="text-5xl sm:text-6xl md:text-8xl font-extrabold uppercase text-center leading-none tracking-tight"
       >
         Where Imagination<br />
         Becomes {" "}
