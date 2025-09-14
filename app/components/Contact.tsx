@@ -241,13 +241,13 @@ const Contact = () => {
             </div>
           </h1>
           <motion.a 
-            href="mailto:hello@freshentertainment.com" 
+            href="mailto:Info@adba-sa.com" 
             className="block mt-6 sm:mt-8 text-xl sm:text-2xl underline decoration-[#f6f5ef] underline-offset-4 hover:text-[#ff6633] transition-all duration-500 relative group"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
             <span className="relative z-10 inline-block group-hover:scale-105 transition-transform duration-500">
-              hello@freshentertainment.com
+              Info@adba-sa.com
             </span>
             <div className="absolute inset-0 bg-[#ff6633]/10 rounded-full blur-xl group-hover:opacity-100 opacity-0 transition-opacity duration-500"></div>
             <motion.span 
