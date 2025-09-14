@@ -53,12 +53,22 @@ export default function Home() {
         <AlternateHero />
         <AlternateTagline />
         {/* <Hero /> */}
-        <About ref={orangeSectionRef} />
+        <div id="about">
+          <About ref={orangeSectionRef} />
+        </div>
         <OurMission />
-        <Services />
-        <Tagline ref={taglineRef} />
-        <Milestones />
-        <Contact />
+        <div id="services">
+          <Services />
+        </div>
+        <div id="">
+          <Tagline ref={taglineRef} />
+        </div>
+        <div id="milestones">
+          <Milestones />
+        </div>
+        <div id="contact">
+          <Contact />
+        </div>
       </main>
     </>
   )

@@ -26,9 +26,6 @@ export default function Header() {
           <Link href="#services" className="px-4 py-2 bg-[#333] hover:bg-[#444] rounded text-sm font-medium">
             SERVICES
           </Link>
-          <Link href="#work" className="px-4 py-2 bg-[#333] hover:bg-[#444] rounded text-sm font-medium">
-            WORK
-          </Link>
           <Link href="#milestones" className="px-4 py-2 bg-[#333] hover:bg-[#444] rounded text-sm font-medium">
             MILESTONES
           </Link>
