@@ -10,7 +10,6 @@ const figtree = Figtree({ subsets: ["latin"], weight: ["300", "400", "500", "600
 export const metadata: Metadata = {
   title: "Fresh Entertainment - Where Vision Meets Experience",
   description: "Saudi Arabia's premier event innovation house",
-  generator: 'v0.dev'
 }
 
 export default function RootLayout({
