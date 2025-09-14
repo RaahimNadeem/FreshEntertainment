@@ -28,11 +28,11 @@ export default function Hero() {
       <section className="container mx-auto px-4 sm:px-6 md:px-8 my-16 sm:my-24 md:my-32">
         <div className="flex flex-col justify-center h-full">
           <div className="max-w-3xl">
-            <h1 className="font-playfair text-4xl sm:text-5xl md:text-6xl lg:text-8xl leading-tight tracking-tight">
+            <h1 className="font-playfair text-3xl sm:text-5xl md:text-6xl lg:text-8xl leading-tight tracking-tight">
               Where Vision
               <br />
               Meets  
-              <span className="pl-2 sm:pl-4 italic text-[#ff6633]">
+              <span className="italic text-[#ff6633]">
                 {text}
                 <span className="animate-pulse">|</span>
               </span>

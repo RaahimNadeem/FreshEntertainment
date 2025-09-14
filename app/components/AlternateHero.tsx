@@ -54,7 +54,7 @@ export default function AlternateHero() {
           transition={{ duration: 1, delay: 0.5 }}
         >
           Where Vision<br />
-          Meets <span className="pl-4 italic text-[#ff6633] relative group">
+          Meets <span className="italic text-[#ff6633] relative group">
             {text}
             <span className="animate-pulse">|</span>
             <span className="absolute -bottom-1 left-0 w-0 h-1 bg-[#ff6633] group-hover:w-full transition-all duration-300"></span>

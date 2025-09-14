@@ -13,6 +13,7 @@ body {
   color: rgb(var(--foreground-rgb));
   background: rgb(var(--background-start-rgb));
   font-family: 'Inter', Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
 }
 
 @layer utilities {

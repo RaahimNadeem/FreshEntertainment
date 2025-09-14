@@ -46,7 +46,7 @@ export default function Home() {
   return (
     <>
       <Preloader />
-      <main className={`min-h-screen text-white transition-colors duration-700 ease-in-out ${bgColor}`}>
+      <main className={`min-h-screen text-white transition-colors duration-700 ease-in-out overflow-x-hidden ${bgColor}`}>
         {/* <FilmGrain /> */}
         {/* <Header /> */}
         <AlternateHeader />

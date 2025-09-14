@@ -56,7 +56,7 @@ const OurMission = React.forwardRef<HTMLDivElement>((props, ref) => {
   const visionRotate = useTransform(scrollYProgress, [0, 1], [0, -5]);
 
   return (
-    <div ref={ref} className="relative min-h-screen w-full flex flex-col md:flex-row items-center justify-center overflow-hidden">
+    <div ref={ref} className="relative min-h-screen w-full flex flex-col md:flex-row items-center justify-center overflow-hidden px-4 sm:px-0">
       {/* Enhanced background with gradient overlay and parallax effect */}
       <motion.div 
         className="absolute inset-0"
@@ -89,7 +89,7 @@ const OurMission = React.forwardRef<HTMLDivElement>((props, ref) => {
       </motion.div>
       
       <div className="container mx-auto px-4 sm:px-6 md:px-8 relative z-10">
-        <div className="flex flex-col md:flex-row items-stretch justify-center gap-6 md:gap-0">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-4 sm:gap-6 md:gap-0 max-w-6xl mx-auto">
           {/* Mission Card */}
           {isMdUp ? (
             <motion.div
@@ -138,13 +138,13 @@ const OurMission = React.forwardRef<HTMLDivElement>((props, ref) => {
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="relative w-full flex flex-col justify-center items-start bg-gradient-to-br from-[#ff6633]/95 to-[#ff6633]/80 backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,0.2)] rounded-3xl p-8 sm:p-10 min-h-[400px] mb-6"
+              className="relative w-full max-w-md mx-auto flex flex-col justify-center items-start bg-gradient-to-br from-[#ff6633]/95 to-[#ff6633]/80 backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,0.2)] rounded-3xl p-6 sm:p-8 min-h-[280px] sm:min-h-[320px] mb-4 sm:mb-6"
             >
               <motion.h2 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="text-white font-extrabold text-3xl sm:text-4xl mb-8 sm:mb-12 tracking-tight relative"
+                className="text-white font-extrabold text-2xl sm:text-3xl md:text-4xl mb-6 sm:mb-8 md:mb-12 tracking-tight relative"
               >
                 THE MISSION
                 <motion.span
@@ -158,7 +158,7 @@ const OurMission = React.forwardRef<HTMLDivElement>((props, ref) => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
-                className="text-white/95 text-base sm:text-lg font-light leading-relaxed tracking-wide"
+                className="text-white/95 text-sm sm:text-base md:text-lg font-light leading-relaxed tracking-wide"
               >
                 {missionText}
               </motion.p>
@@ -212,13 +212,13 @@ const OurMission = React.forwardRef<HTMLDivElement>((props, ref) => {
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="relative w-full flex flex-col justify-center items-start bg-gradient-to-br from-neutral-900/95 to-neutral-800/80 backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,0.2)] rounded-3xl p-8 sm:p-10 min-h-[400px]"
+              className="relative w-full max-w-md mx-auto flex flex-col justify-center items-start bg-gradient-to-br from-neutral-900/95 to-neutral-800/80 backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,0.2)] rounded-3xl p-6 sm:p-8 min-h-[280px] sm:min-h-[320px]"
             >
               <motion.h2 
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
-                className="text-white font-extrabold text-3xl sm:text-4xl mb-8 sm:mb-12 tracking-tight relative"
+                className="text-white font-extrabold text-2xl sm:text-3xl md:text-4xl mb-6 sm:mb-8 md:mb-12 tracking-tight relative"
               >
                 THE VISION
                 <motion.span
@@ -232,7 +232,7 @@ const OurMission = React.forwardRef<HTMLDivElement>((props, ref) => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.5 }}
-                className="text-white/95 text-base sm:text-lg font-light leading-relaxed tracking-wide"
+                className="text-white/95 text-sm sm:text-base md:text-lg font-light leading-relaxed tracking-wide"
               >
                 {visionText}
               </motion.p>
